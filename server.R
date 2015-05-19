@@ -5,7 +5,9 @@ library(shiny)
 library(ggplot2)
 library(plyr)
 
-#Prepare the state and region data sets.  This should run only once.
+#Prepare the state and region data sets.  This should run only once at application
+#startup
+
 data(state)
 dataset <- data.frame(state.abb, as.factor(state.region), state.x77)
 names(dataset) <- c("State", "Region", "Population", "Income", "Illiteracy",
@@ -28,7 +30,7 @@ function(input, output) {
 
     #By using the outputs of the Y and X axis selectors and the dataSort radio
     #buttons to control the way the plot is rendered, the renderPlot command 
-    #is automatically reactive.
+    #is intrinsically reactive.
     output$plot <- renderPlot({
 
             #Check to see if one of the sort radio buttons is set.  If so, sort

@@ -20,3 +20,4 @@ Suggestions
 
 *	For best viewing, expand the horizontal dimension of the application window to more easily view the text of the state abbreviations along the X-axis when plotting State as the X-axis variable.
 *	Coloring by Region facilitates a comparison by region as well as an individual state by state comparison.
+
